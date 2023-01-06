@@ -1,1 +1,11 @@
-GAME_NAME = OVERBLIND
+GAME_NAME = Farm On The Wheels
+
+Locations:
+1. Road(Main location)
+2. Shops(Secondary location)
+
+We can sell our stuff to some strangers.
+How it works?
+Player can purchase seeds, after this player can decide what he wants to grow
+His car has its own limit of products(seeds)
+Player can sell his items to strangers, and buy on this money more expensive(or not) seeds or upgrade his car
