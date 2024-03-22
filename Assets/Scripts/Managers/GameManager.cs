@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public static int startCoins = 100;
     public static int countOfItems = 5;
     public static bool isActiveWindow = false;
+    public List<Button> buttons;
 
     public void Start()
     {
@@ -42,11 +43,13 @@ public class GameManager : MonoBehaviour
             strangersWindow.SetActive(true);
             isActiveWindow = true;
         }
+        SetButtonsActive(false);
     }
     public void OffStrangers()
     {
         strangersWindow.SetActive(false);
         isActiveWindow = false;
+        SetButtonsActive(true);
     }
     public void MeetTheShop()
     {
@@ -61,17 +64,27 @@ public class GameManager : MonoBehaviour
 
             shopWindow.SetActive(true);
             isActiveWindow = true;
+            SetButtonsActive(false);
         }
     }
     public void SetOffTriggerShop()
     {
         TriggerShop.endTrigger = true;
         TriggerShop.enterTrigger = false;
+
+    }
+    private void SetButtonsActive(bool active)
+    {
+        foreach (Button button in buttons)
+        {
+            button.interactable = active;
+        }
     }
     public void SetOffTriggerStrangers()
     {
         TriggerStrangers.endTrigger = true;
         TriggerStrangers.enterTrigger = false;
+
     }
     public void ShopOff()
     {
@@ -83,6 +96,8 @@ public class GameManager : MonoBehaviour
         }
         shopWindow.SetActive(false);
         isActiveWindow = false;
+
+        SetButtonsActive(true);
     }
 
     public void StartNewGame()
