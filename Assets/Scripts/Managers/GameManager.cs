@@ -71,7 +71,6 @@ public class GameManager : MonoBehaviour
     {
         TriggerShop.endTrigger = true;
         TriggerShop.enterTrigger = false;
-
     }
     private void SetButtonsActive(bool active)
     {
@@ -99,7 +98,6 @@ public class GameManager : MonoBehaviour
 
         SetButtonsActive(true);
     }
-
     public void StartNewGame()
     {
         coins = startCoins;

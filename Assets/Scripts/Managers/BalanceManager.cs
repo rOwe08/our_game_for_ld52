@@ -7,6 +7,7 @@ public class BalanceManager : MonoBehaviour
     public static BalanceManager Instance { get; set; }
     [SerializeField] private TextMeshProUGUI coinsShopText;
     [SerializeField] private TextMeshProUGUI coinsInventoryText;
+    [SerializeField] private TextMeshProUGUI coinsMainText;
     public int coins = 100;
 
     public void Start()
@@ -39,6 +40,7 @@ public class BalanceManager : MonoBehaviour
     {
         coinsShopText.text = "Balance: " + this.coins;
         coinsInventoryText.text = "Balance: " + this.coins;
+        coinsMainText.text = "Balance: " + this.coins;
     }
     public bool CheckOnMinusCoins(double coins) => this.coins - coins < 0;
 }

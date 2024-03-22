@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public float speed = 3f;
     public static bool FarmIsActive = false;
 
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
